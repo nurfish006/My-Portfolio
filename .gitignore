@@ -1,0 +1,16 @@
+# This is a comment - lines starting with # are ignored
+
+# Ignore specific files
+filename.ext
+config.json
+
+# Ignore entire directories
+directory_name/
+node_modules/
+build/
+dist/
+
+# Ignore files of a certain type
+*.log
+*.tmp
+*.DS_Store
