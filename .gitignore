@@ -1,16 +1,14 @@
-# This is a comment - lines starting with # are ignored
+# Environment files
+.env
+.env.*
+.env.local
 
-# Ignore specific files
-filename.ext
-config.json
-
-# Ignore entire directories
-directory_name/
+# Node modules
 node_modules/
-build/
-dist/
+.npm
+.pnpm
+.yarn/
 
-# Ignore files of a certain type
-*.log
-*.tmp
-*.DS_Store
+# Build cache
+.cache/
+node_modules/.cache/
