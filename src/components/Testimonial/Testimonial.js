@@ -102,9 +102,7 @@ const Testimonial = () => {
                     </Slider>
                 </div>
             </div>
-            <div className="visible-rotate-text">
-                <h1>Review</h1>
-            </div>
+            
         </section>
     )
 }

@@ -54,9 +54,6 @@ const ProjectSection = (props) => {
             </div>
             <ProjectSingle open={open} onClose={handleClose} title={state.title} pImg={state.ps1img} psub1img1={state.psub1img1} psub1img2={state.psub1img2} />
 
-            <div className="visible-rotate-text">
-                <h1>My Projects</h1>
-            </div>
         </section>
     );
 }

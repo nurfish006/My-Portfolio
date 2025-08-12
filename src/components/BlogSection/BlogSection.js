@@ -61,9 +61,7 @@ const BlogSection = () => {
                     </div>
                 </div>
             </div>
-            <div className="visible-rotate-text">
-                <h1>Latest Blog</h1>
-            </div>
+            
             <BlogSingle open={open} onClose={handleClose} title={state.title} bImg={state.blogSingleImg} create_at={state.create_at} author={state.author} comment={state.comment} />
         </section>
     );
