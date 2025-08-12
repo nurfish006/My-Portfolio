@@ -71,5 +71,74 @@ Version:        1.0.0
 @import "page/portfolio-single";
 @import "page/blog-single";
 
+// Theme styles
+body.dark-theme {
+  background-color: $body-bg-color;
+  color: $text-color;
+  
+  .tp-hero-section-1 {
+    background-color: $body-bg-color;
+    
+    h2, h1 {
+      color: $white;
+    }
+    
+    p {
+      color: $text-color;
+    }
+  }
+  
+  .App-header {
+    background-color: $card-bg-color;
+    color: $white;
+  }
+  
+  .theme-btn {
+    border-color: rgba(255, 255, 255, 0.2);
+    color: $white;
+    
+    &:hover {
+      background: $white;
+      color: $theme-primary-color;
+    }
+  }
+}
+
+body.light-theme {
+  background-color: $light-body-bg-color;
+  color: $light-text-color;
+  
+  .tp-hero-section-1 {
+    background-color: $light-body-bg-color;
+    
+    h2, h1 {
+      color: $light-heading-color;
+    }
+    
+    p {
+      color: $light-text-color2;
+    }
+  }
+  
+  .App-header {
+    background-color: $light-card-bg-color;
+    color: $light-text-color;
+  }
+  
+  .theme-btn {
+    border-color: rgba(0, 0, 0, 0.2);
+    color: $light-text-color;
+    
+    &:hover {
+      background: $light-theme-primary-color;
+      color: $white;
+    }
+  }
+  
+  .visible-text h1 {
+    color: rgba(26, 26, 26, 0.1);
+  }
+}
+
 
 

@@ -45,9 +45,7 @@ const ServiceSection = (props) => {
                     </div>
                 </div>
             </div>
-            <div className="visible-rotate-text">
-                <h1>Services</h1>
-            </div>
+            
             <ServiceSingle open={open} onClose={handleClose} title={state.sTitle} dImg={state.sImgS} sImg1={state.ssImg1} sImg2={state.ssImg2} />
         </div>
     );

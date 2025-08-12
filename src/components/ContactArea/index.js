@@ -14,9 +14,6 @@ const ContactArea = (props) => {
                     <ContactForm/>
                 </div>
             </div>
-            <div className="visible-rotate-text">
-                <h1>Contat Me</h1>
-            </div>
         </section>
     )
 }

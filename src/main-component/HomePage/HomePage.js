@@ -1,45 +1,35 @@
 import React, { Fragment } from 'react';
-import About from '../../components/about/about';
+import Navbar from '../../components/Navbar/Navbar'
+import Hero from '../../components/hero/hero'
+import About from '../../components/about/about'
+import ServiceSection from '../../components/ServiceSection/ServiceSection'
+import ProjectSection from '../../components/ProjectSection/ProjectSection'
+import Testimonial from '../../components/Testimonial/Testimonial'
+import BlogSection from '../../components/BlogSection/BlogSection'
+import ContactArea from '../../components/ContactArea'
+import Footer from '../../components/footer/Footer'
+import Marque from '../../components/marque/marque'
 import BackToTop from '../../components/backToTop/backToTop';
-import ContactArea from '../../components/ContactArea';
-import Hero from '../../components/hero/hero';
-import Marquee from '../../components/marque/marque';
-import Navbar from '../../components/Navbar/Navbar';
-import ProjectSection from '../../components/ProjectSection/ProjectSection';
-import ServiceSection from '../../components/ServiceSection/ServiceSection';
-import Testimonial from '../../components/Testimonial/Testimonial';
-import { Element } from 'react-scroll'
-import BlogSection from '../../components/BlogSection/BlogSection';
-import Footer from '../../components/footer/Footer';
-import Pricing from '../../components/Pricing';
+import { useTheme } from '../../context/ThemeContext';
 
 const HomePage = () => {
+    const { isDarkMode } = useTheme();
+
     return (
         <Fragment>
-            <Navbar />
-            <Element name='home'>
+            <div className={isDarkMode ? 'dark-theme' : 'light-theme'}>
+                <Navbar />
                 <Hero />
-            </Element>
-            <Element name='about'>
+                <Marque />
                 <About />
-            </Element>
-            <Element name='service'>
                 <ServiceSection />
-            </Element>
-            <Marquee />
-            <Element name='project'>
                 <ProjectSection />
-            </Element>
-            <Testimonial />
-            <Element name='blog'>
+                <Testimonial />
                 <BlogSection />
-            </Element>
-            <Pricing />
-            <Element name='contact'>
                 <ContactArea />
-            </Element>
-            <Footer />
-            <BackToTop />
+                <Footer />
+                <BackToTop />
+            </div>
         </Fragment>
     )
 };

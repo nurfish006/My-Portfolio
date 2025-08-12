@@ -2,10 +2,13 @@ import React from "react";
 import { NavLink } from 'react-router-dom'
 import himg from '../../images/slider/right-img.png'
 import { Link } from 'react-scroll'
+import { useTheme } from '../../context/ThemeContext'
 
 const Hero =() => {
+    const { isDarkMode } = useTheme();
+    
     return (
-        <section className="tp-hero-section-1">
+        <section className={`tp-hero-section-1 ${isDarkMode ? 'dark-theme' : 'light-theme'}`}>
             <div className="container">
                 <div className="row">
                     <div className="col col-xs-7 col-lg-7">
@@ -35,9 +38,7 @@ const Hero =() => {
                     <li><NavLink to="/">Instagram</NavLink></li>
                 </ul>
             </div>
-            <div className="visible-text">
-                <h1>Developer</h1>
-            </div>
+           
         </section>
     )
 }

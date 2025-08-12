@@ -87,9 +87,7 @@ const Pricing = (props) => {
                     </div>
                 </div>
             </div>
-            <div className="visible-rotate-text">
-                <h1>My Pricing</h1>
-            </div>
+            
         </section>
     )
 }

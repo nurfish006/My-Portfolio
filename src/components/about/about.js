@@ -48,9 +48,7 @@ const About = (props) => {
                     </div>
                 </div>
             </div>
-            <div className="visible-rotate-text">
-                <h1>About Me</h1>
-            </div>
+            
         </section>
     )
 }

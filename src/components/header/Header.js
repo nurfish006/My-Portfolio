@@ -1,21 +1,24 @@
-import React, { useState } from 'react';
-import { Link } from 'react-scroll'
+import React, { useState } from 'react'
+import { Link } from "react-scroll";
 import MobileMenu from '../MobileMenu/MobileMenu'
+import { useTheme } from '../../context/ThemeContext'
 import Logo from '../../images/logo.png'
 
 const Header = (props) => {
     const [menuActive, setMenuState] = useState(false);
-
-    const SubmitHandler = (e) => {
-        e.preventDefault()
-    }
+    const [cartActive, setcartState] = useState(false);
+    const { isDarkMode } = useTheme();
 
     const ClickHandler = () => {
         window.scrollTo(10, 0);
     }
 
+    const SubmitHandler = (e) => {
+        e.preventDefault()
+    }
+
     return (
-        <header id="header" className={props.topbarNone}>
+        <header id="header" className={`${props.topbarNone} ${isDarkMode ? 'dark-theme' : 'light-theme'}`}>
             <div className={`tp-site-header ${props.hclass}`}>
                 <nav className="navigation navbar navbar-expand-lg navbar-light">
                     <div className="container-fluid">
@@ -53,22 +56,7 @@ const Header = (props) => {
                             </div>
                             <div className="col-lg-3 col-md-2 col-2">
                                 <div className="header-right" id="home">
-                                    <div className="header-search-form-wrapper">
-                                        <div className="cart-search-contact">
-                                            <button  className="search-toggle-btn" onClick={() => setMenuState(!menuActive)}><i
-                                                className={`ti-search ${menuActive ? "ti-close" : "ti-search"}`}></i></button>
-                                            <div className={`header-search-form ${menuActive ? "header-search-content-toggle" : ""}`}>
-                                                <form onSubmit={SubmitHandler}>
-                                                    <div>
-                                                        <input type="text" className="form-control"
-                                                            placeholder="Search here..." />
-                                                        <button type="submit"><i
-                                                            className="fi ti-search"></i></button>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    {/* Search functionality removed */}
                                 </div>
                             </div>
                         </div>
